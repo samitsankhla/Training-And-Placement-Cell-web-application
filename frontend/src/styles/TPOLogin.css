@@ -1,0 +1,37 @@
+/* Use the same CSS as StudentLogin.css but change the colors if needed */
+/* Container Styles */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Adding content class styling as well */
+.content {
+  display: flex;
+  flex: 1;
+  background-color: #f5f5f5;
+  padding: 2rem;
+  width: 100%;
+}
+
+/* ...copy all styles from StudentLogin.css... */
+/* Only change the following if you want different colors for TPO */
+
+.login-title {
+  color: #004d99;
+}
+
+.login-button {
+  background-color: #004d99;
+}
+
+.login-button:hover {
+  background-color: #003366;
+}
+
+.links a {
+  color: #004d99;
+}

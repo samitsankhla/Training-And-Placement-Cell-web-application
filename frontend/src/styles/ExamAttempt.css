@@ -1,0 +1,81 @@
+/* ExamAttempt.css - Main styling for the exam attempt page */
+
+.exam-attempt-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.exam-attempt-content {
+  flex: 1;
+  padding: 2rem 0;
+  max-width: 1200px;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 1rem;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.exam-completion-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.exam-completion-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.exam-result-summary {
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.result-details {
+  margin: 2rem 0;
+}
+
+.score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.status {
+  font-size: 1.2rem;
+}
+
+.passed {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.failed {
+  color: #dc3545;
+  font-weight: bold;
+}

@@ -1,0 +1,189 @@
+.navbar {
+  background-color: #2e6da4;
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navbar-container {
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  height: 45px; /* Adjusted to match the height in your screenshot */
+}
+
+.mobile-menu-toggle {
+  display: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navbar-links {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.navbar-links ul {
+  display: flex;
+  margin-left: 5%;
+  padding: 0;
+  list-style: none;
+  height: 100%;
+}
+
+.navbar-links li {
+  position: relative;
+  height: 100%;
+}
+
+.navbar-links li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+  padding: 0 1.2rem;
+  height: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links li.active a,
+.navbar-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-links li a i {
+  font-size: 1rem;
+}
+
+.dropdown-arrow {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 45px; /* Match the navbar height */
+  left: 0;
+  background-color: white;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  width: 100%;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  height: auto;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f5f5f5;
+  color: #2e6da4;
+}
+
+.dropdown-menu li a i {
+  color: #2e6da4;
+  width: 20px;
+  text-align: center;
+}
+
+/* Removed navbar-action class and styles since we removed the register button */
+
+/* Responsive styling */
+@media (max-width: 992px) {
+  .navbar-container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .navbar-links {
+    position: absolute;
+    top: 45px; /* Match the navbar height */
+    left: 0;
+    background-color: #2e6da4;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    height: auto;
+  }
+  
+  .navbar-links.active {
+    max-height: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-links ul {
+    flex-direction: column;
+  }
+  
+  .navbar-links li a {
+    padding: 0 1.5rem;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background-color: #235a8b;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: max-height 0.3s ease;
+    border-radius: 0;
+  }
+  
+  .dropdown-menu.show {
+    max-height: 500px;
+  }
+  
+  .dropdown-menu li {
+    border-bottom-color: #2e6da4;
+  }
+  
+  .dropdown-menu li a {
+    color: white;
+    padding-left: 3rem;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .dropdown-menu li a i {
+    color: white;
+  }
+}

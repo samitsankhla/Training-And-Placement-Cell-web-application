@@ -1,0 +1,86 @@
+/* OTP Verification Styles */
+.otp-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.otp-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.otp-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.otp-form input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 18px;
+  letter-spacing: 5px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.otp-form .form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.otp-form .submit-button {
+  padding: 10px 20px;
+  background-color: #4f7df7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  min-width: 120px;
+}
+
+.otp-form .submit-button:hover {
+  background-color: #3a68d8;
+}
+
+.otp-form .submit-button:disabled {
+  background-color: #b3b3b3;
+  cursor: not-allowed;
+}
+
+.otp-form .resend-button {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #4f7df7;
+  border: 1px solid #4f7df7;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.otp-form .resend-button:hover {
+  background-color: #f0f4ff;
+}
+
+.otp-form .resend-button:disabled {
+  color: #b3b3b3;
+  border-color: #b3b3b3;
+  cursor: not-allowed;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 500;
+}

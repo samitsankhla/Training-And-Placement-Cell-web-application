@@ -1,0 +1,270 @@
+/* ExamInstructions.css - Styling for the exam instructions component */
+
+/* Global styles for the exam instructions page */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Make sure we have proper box model calculations */
+* {
+  box-sizing: border-box;
+}
+
+/* Fix parent container width issues */
+.container, .exam-attempt-content, .container-fluid {
+  display: flex;
+  justify-content: center;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+/* Force entire page layout to use grid for perfect centering */
+.exam-attempt-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Main content area with grid centering */
+.exam-attempt-content {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding: 0 !important;
+}
+
+/* Add some responsive adjustments */
+@media (max-width: 768px) {
+  .exam-instructions-container {
+    padding: 1rem;
+    width: 95%;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .info-value {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+  
+  .exam-title {
+    font-size: 1.5rem;
+    color: white;
+  }
+}
+
+.exam-instructions-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 70vh; /* Ensures vertical centering in viewport */
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
+}
+
+/* For Bootstrap Container overrides */
+.container, 
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure any direct parent of exam-instructions-container centers it */
+*:has(> .exam-instructions-container) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.instructions-card {
+  width: 100%;
+  max-width: 850px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 auto; /* Additional centering */
+  transition: all 0.3s ease;
+  position: relative;
+  left: 0; /* Reset any left positioning */
+  right: 0; /* Reset any right positioning */
+}
+
+.instructions-card .card-header {
+  background: linear-gradient(135deg, #0062cc, #007bff);
+  color: white;
+  padding: 1.5rem;
+  border-bottom: none;
+  text-align: center;
+  width: 100%;
+}
+
+.exam-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.exam-info {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.info-item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 123, 255, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+}
+
+.info-value {
+  font-weight: 500;
+  color: #212529;
+  padding: 0.35rem 0.75rem;
+  background: rgba(0, 123, 255, 0.08);
+  border-radius: 4px;
+  font-size: 1.05rem;
+}
+
+.instructions-section {
+  margin-bottom: 2.5rem;
+  padding: 0 0.5rem;
+}
+
+.instructions-section h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: #343a40;
+  position: relative;
+  padding-bottom: 0.75rem;
+  display: inline-block;
+}
+
+.instructions-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #007bff, rgba(0, 123, 255, 0.2));
+  border-radius: 3px;
+}
+
+.instructions-content {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.instructions-content ul {
+  padding-left: 1rem;
+  list-style-type: none;
+}
+
+.instructions-content li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+.instructions-content li::before {
+  content: '•';
+  color: #007bff;
+  font-weight: bold;
+  font-size: 1.4rem;
+  position: absolute;
+  left: 0;
+  top: -0.25rem;
+}
+
+.start-exam-section {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.start-notice {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+  color: #495057;
+  padding: 0.75rem;
+  background-color: rgba(255, 243, 205, 0.5);
+  border-left: 4px solid #ffc107;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.start-exam-button {
+  padding: 0.85rem 2.75rem;
+  font-size: 1.15rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border: none;
+  color: white;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.start-exam-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+  background: linear-gradient(135deg, #0069d9, #004494);
+}
+
+.start-exam-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.35);
+}

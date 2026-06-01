@@ -1,0 +1,13 @@
+.exam-date-range {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: #495057;
+  font-style: italic;
+}
+
+.exam-date-range small {
+  background-color: rgba(0, 123, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+}

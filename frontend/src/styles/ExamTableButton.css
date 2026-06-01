@@ -1,0 +1,49 @@
+/* Specific styling for exam table buttons */
+
+/* Ensure the table cell containing the button is properly sized */
+.exam-table td:last-child {
+  text-align: center;
+  vertical-align: middle;
+  min-width: 140px;
+  padding: 0.75rem;
+}
+
+/* Add a subtle flash effect when exam is newly added or updated */
+@keyframes button-highlight {
+  0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(46, 204, 113, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+}
+
+.exam-table tr.new-exam .action-button.take-exam:not(.disabled) {
+  animation: button-highlight 2s ease-in-out;
+}
+
+/* Add tooltip-style for disabled buttons */
+.action-button.take-exam.disabled:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/* Add a subtle arrow for the tooltip */
+.action-button.take-exam.disabled:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+  z-index: 10;
+}
